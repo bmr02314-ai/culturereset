@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 IS THE NEW 2016: THE CULTURE RESET</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #989898; 
+            color: #ffffff;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.4; 
+            letter-spacing: -0.3px; 
+        }
+        
+        h1, h2, h3, h4, .logo, nav a, .trend-title-big {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        p, span, li {
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        header {
+            padding: 20px 0 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 38px;
+            color: #ff9beb;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            gap: 35px;
+        }
+        nav a {
+            color: #ff9beb;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .top-white-bar {
+            width: 100%;
+            height: 1px;
+            background-color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero-title {
+            font-size: 46px;
+            letter-spacing: -0.5px;
+            margin-bottom: 25px;
+            word-spacing: -2px;
+            line-height: 1.2;
+        }
+        .hero-title span {
+            color: #ff9beb;
+            font-weight: 700;
+        }
+        .main-art-box {
+            width: 100%;
+            overflow: hidden;
+        }
+        .main-art-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .phenomena-section {
+            display: grid;
+            grid-template-columns: 4.5fr 5.5fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        .graph-box {
+            width: 100%;
+            overflow: hidden;
+        }
+        .graph-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .phenomena-content h2 {
+            color: #ff9beb; 
+            font-size: 26px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        .phenomena-list {
+            list-style: none;
+        }
+        .phenomena-list li {
+            margin-bottom: 14px;
+        }
+        .phenomena-list h3 {
+            font-size: 15px;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+        .phenomena-list p {
+            font-size: 12px;
+            color: #cccccc;
+        }
+
+        .trend-container-layout {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 25px;
+            margin-bottom: 70px;
+            padding-top: 20px;
+        }
+        .trend-content-core {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        .trend-title-big {
+            font-size: 85px;
+            line-height: 0.9;
+            letter-spacing: -2px;
+            min-width: 240px;
+            padding-top: 10px;
+        }
+        .trend-right-media-block {
+            flex-grow: 1;
+        }
+        
+        .trend-media-grid {
+            display: flex; 
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center; 
+        }
+        
+        .media-box-large {
+            flex: 2; 
+            height: 100%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            overflow: hidden;
+        }
+        
+        .media-box-small {
+            flex: 1; 
+            height: 100%; 
+            overflow: hidden;
+        }
+        
+        .media-box-large img {
+            max-width: 100%; 
+            max-height: 100%; 
+            height: auto; 
+            display: block;
+        }
+        
+        .media-box-small img {
+            width: 100%; 
+            height: auto; 
+            display: block;
+        }
+        
+        .trend-desc {
+            font-size: 13px;
+            color: #ffffff;
+            text-align: justify;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        .pink-vertical-bar {
+            width: 14px;
+            background: linear-gradient(to bottom, #e066b7, #b23b8c);
+            border-radius: 7px;
+            box-shadow: 0 0 8px rgba(224, 102, 183, 0.4);
+        }
+
+        .section-wrapper {
+            margin-bottom: 70px;
+            padding-top: 20px;
+        }
+        .section-title {
+            color: #ff9beb;
+            font-size: 26px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+        
+        .archive-block-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch; 
+            gap: 15px;
+            width: 100%;
+            height: 320px; 
+            margin-bottom: 45px;
+        }
+        
+        .archive-card {
+            display: block;
+            flex: 1 1 auto; 
+            overflow: visible; 
+            background-color: #ffffff; 
+            padding: 8px 8px 24px 8px; 
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1;
+        }
+
+        .archive-card:nth-child(1) { transform: rotate(-1.5deg) translateY(-2px); }
+        .archive-card:nth-child(2) { transform: rotate(1deg) translateY(3px); }
+        .archive-card:nth-child(3) { transform: rotate(-1deg) translateY(-4px); }
+        .archive-card:nth-child(4) { transform: rotate(1.8deg) translateY(2px); }
+
+        .archive-card:hover {
+            transform: rotate(0deg) scale(1.03);
+            box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.35);
+            z-index: 10;
+        }
+        
+        .archive-card img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain; 
+        }
+
+        .archive-descriptions {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .desc-group {
+            width: 100%;
+        }
+        .desc-group h4 {
+            color: #ff9beb;
+            font-size: 14px;
+            margin-bottom: 6px;
+            text-transform: none;
+        }
+        .desc-group p {
+            color: #ffffff;
+            font-size: 13px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .vibes-block-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 20px;
+            width: 100%;
+            height: 320px; 
+            margin-bottom: 45px;
+        }
+        
+        .vibes-card {
+            display: block;
+            flex: 1 1 auto;
+            overflow: visible; 
+            background-color: #ffffff; 
+            padding: 8px 8px 24px 8px; 
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1;
+        }
+
+        .vibes-card:nth-child(1) { transform: rotate(-2deg) translateY(3px); }
+        .vibes-card:nth-child(2) { transform: rotate(1.5deg) translateY(-3px); }
+        .vibes-card:nth-child(3) { transform: rotate(-1.2deg) translateY(4px); }
+
+        .vibes-card:hover {
+            transform: rotate(0deg) scale(1.03);
+            box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.35);
+            z-index: 10;
+        }
+        
+        .vibes-card img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain; 
+        }
+
+        .bottom-white-bar {
+            width: 100%;
+            height: 1px;
+            background-color: #ffffff;
+            margin-top: 40px;
+        }
+        footer {
+            padding: 20px 0 40px 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .footer-copy {
+            font-size: 12px;
+            color: #ff9beb;
+            letter-spacing: 0.5px;
+        }
+
+        .sticky-player {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 320px;
+            background-color: #111111;
+            border: 1px solid #ffffff;
+            padding: 12px 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .track-details {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 10px;
+            flex-grow: 1;
+        }
+        .track-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #ff9beb;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .track-artist {
+            font-size: 10px;
+            color: #aaaaaa;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        .player-controls button {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 12px;
+            cursor: pointer;
+            padding: 0 4px;
+            transition: color 0.2s;
+        }
+        .player-controls button#playBtn {
+            font-size: 15px;
+        }
+        .player-controls button:hover {
+            color: #ff9beb;
+        }
+        .progress-container {
+            width: 100%;
+            height: 3px;
+            background-color: #333333;
+            cursor: pointer;
+            position: relative;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #ff9beb;
+            box-shadow: 0 0 6px #ff9beb;
+            transition: width 0.1s linear;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="#" class="logo">+</a>
+            <nav>
+                <a href="#why-section">why</a>
+                <a href="#archive-section">archive</a>
+                <a href="#vibes-section">vibes</a>
+            </nav>
+        </header>
+        
+        <div class="top-white-bar"></div>
+
+        <section class="hero-section">
+            <h1 class="hero-title"><span>2026</span> is the new <span>2016</span>:<br>the culture reset</h1>
+            <div class="main-art-box">
+                <img src="images/main.png" alt="Main Visual Image">
+            </div>
+        </section>
+
+        <section class="phenomena-section">
+            <div class="graph-box">
+                <img src="images/graphe.png" alt="Graph / Chart Image">
+            </div>
+            <div class="phenomena-content">
+                <h2>Key 2016 Phenomena</h2>
+                <ul class="phenomena-list">
+                    <li>
+                        <h3>1. RETURN OF INDIE - SLEAZE</h3>
+                        <p>인디 슬리즈(Indie-Sleaze)의 귀환과 음악이 주는 아늑한 몰입감.</p>
+                    </li>
+                    <li>
+                        <h3>2. PEAK VINE HUMOUR REVIVAL</h3>
+                        <p>바인(Vine) 감성 유머의 전성기 부활.</p>
+                    </li>
+                    <li>
+                        <h3>3. THE HEDI SLIMANE 'ROCK CHIC' ERA</h3>
+                        <p>칼날처럼 날렵한 실루엣, 가죽 재킷, 그리고 록 글래머로 대변되는 한 시대를 정의한 스타일.</p>
+                    </li>
+                    <li>
+                        <h3>4. FRANK OCEAN'S 'BLONDE' IMPACT</h3>
+                        <p>2016년의 문화적·청각적 선구자이자 마스터피스였던 앨범의 영향력을 기리며.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="trend-container-layout" id="why-section">
+            <div class="trend-content-core">
+                <div class="trend-title-big">
+                    2026<br>IS THE<br>NEW<br>2016?
+                </div>
+                <div class="trend-right-media-block">
+                    <div class="trend-media-grid">
+                        <div class="media-box-large">
+                            <img src="images/tiktok-feed.png" alt="UI / App Stream Grid Image">
+                        </div>
+                        <div class="media-box-small">
+                            <img src="images/collage.webp" alt="Collage Image">
+                        </div>
+                    </div>
+                    <p class="trend-desc">
+                        2026년의 시선에서 되돌아본 2016년은 음악과 하위문화의 황금기이자, 언더그라운드 씬의 날 것 그대로의 에너지와 인디 문화가 가장 만개했던 시절로 기억됩니다. 숏폼 알고리즘이 우리의 주의력을 지배하기 전, '포켓몬 GO'로 사람들이 거리로 쏟아져 나오던 완벽한 테크-라이프 밸런스의 시대였습니다. 팬데믹 이전의 세상이었기에, 우리는 어떠한 사회적 불안감이나 단절감 없이 붐비는 페스티벌과 공연장에 자유롭게 모여들곤 했습니다. 또한 하이패션 아카이브의 부활과 인간의 순수한 창의성이 지금의 AI 중심 환경보다 더 밝게 빛나던 최적의 문화적 접점이기도 했습니다. 결국 우리가 2016년을 돌아보는 이유는, 알고리즘의 큐레이션이 아닌 우리 자신의 열정이 이끌었던 '진정한 탐험의 마지막 시대'였기 때문입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="pink-vertical-bar"></div>
+        </section>
+
+        <section class="section-wrapper" id="archive-section">
+            <h2 class="section-title">Archive Sessions</h2>
+            
+            <div class="archive-block-grid">
+                <div class="archive-card">
+                    <img src="images/archive-01.jpg" alt="Hedi's Razor-Sharp Silhouette">
+                </div>
+                <div class="archive-card">
+                    <img src="images/archive-02.jpg" alt="The Golden Era of Rock Chic">
+                </div>
+                <div class="archive-card">
+                    <img src="images/archive-03.jpg" alt="Indie Sleaze Raw and Unfiltered">
+                </div>
+                <div class="archive-card">
+                    <img src="images/archive-04.jpg" alt="Archival Napoleon Jacket">
+                </div>
+            </div>
+
+            <div class="archive-descriptions">
+                <div class="desc-group">
+                    <h4>Hedi's Razor-Sharp Silhlouette :</h4>
+                    <p>2026년을 장악한 알고리즘 기반의 규격화된 오버사이즈 트렌드에 피로감을 느낀 언더그라운드 씬은 에디 슬리먼 특유의 날렵한 록 시크 아카이브 실루엣을 다시 소환했습니다. 이는 인간 신체의 가공되지 않은 선을 되찾고, 진정한 독창성을 회복하겠다는 선언과도 같습니다.</p>
+                </div>
+                <div class="desc-group">
+                    <h4>The Golden Era of Rock Chic :</h4>
+                    <p>2026년의 하이퍼 커넥티드(초연결) 라이프스타일 속에서 디지털 피로에 지친 젊은이들은 2016년의 어두운 글래머러스함에서 위안을 찾습니다. 매일 마주하는 화면 뒤에 숨겨진 차갑고 네온 빛 가득한 밤을 표현하기에 록 시크보다 완벽한 시각적 매개체는 없습니다.</p>
+                </div>
+                <div class="desc-group">
+                    <h4>Indie-Sleaze, Raw and Unfiltered :</h4>
+                    <p>AI가 큐레이팅한 완벽함과 결점 없는 디지털 픽셀이 넘쳐나는 2026년의 풍경 속에서, 사람들은 역설적으로 '망가질 수 있는 자유'를 갈망합니다. 2016년 인디 슬리즈의 로파이(Lo-Fi)하고 즉흥적인 에너지는 오늘날 하이퍼팝 씬의 미학적·정신적 중추 역할을 하며, 현대 소셜 미디어가 주는 숨 막히는 완벽주의를 산산조각 냅니다.</p>
+                </div>
+                <div class="desc-group">
+                    <h4>Archival Napoleon Jacket :</h4>
+                    <p>한때 2016년 패션 씬을 지배했던 압도적인 스테이트먼트 피스들은 이제 2026년에 이르러 아카이브 큐레이션의 '성물(Holy Grail)'이 되었습니다. 10년 전의 마스터피스를 해체하고 이를 오늘날의 서브컬처 맥락 속에서 스타일링하는 행위는, 미래지향적인 패션 감각을 보여주는 가장 완벽한 과시가 되었습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrapper" id="vibes-section">
+            <h2 class="section-title">2016 Vibes</h2>
+            
+            <div class="vibes-block-grid">
+                <div class="vibes-card">
+                    <img src="images/vibes-01.png" alt="Snapchat Filter Aesthetics">
+                </div>
+                <div class="vibes-card">
+                    <img src="images/vibes-02.png" alt="Low-Res Flash & Timestamps">
+                </div>
+                <div class="vibes-card">
+                    <img src="images/vibes-03.png" alt="Tumblr Sad Boys Interface">
+                </div>
+            </div>
+
+            <div class="archive-descriptions">
+                <div class="desc-group">
+                    <h4>Snapchat Filter & Overlay Aesthetics :</h4>
+                    <p>상징적인 '강아지 필터'가 적용된 사진을 활용해 2016년 특유의 스냅챗 감성을 재현합니다. 웹 네이티브 호버 애니메이션이 적용된 클래식한 반투명 블랙 텍스트 배너를 얹고, 그 위에 "mood"나 "miss me" 같은 날 것 그대로의 캡션을 더해 연출합니다.</p>
+                </div>
+                <div class="desc-group">
+                    <h4>Low-Res Flash & Timestamped Screencaps :</h4>
+                    <p>어두운 방 안에서 강렬한 플래시를 터뜨려 찍은 거칠고 과노출된 아이폰 거울 셀카를 활용합니다. 짙은 디지털 노이즈 처리를 더하고, 그리드 카드 모퉁이에 선명한 오렌지색 타임스탬프(2016.06.08)를 각인하는 방식입니다.</p>
+                </div>
+                <div class="desc-group">
+                    <h4>Tumblr 'Sad Boys' & iOS Interface Scraps :</h4>
+                    <p>2016년 당시의 iOS 음악 플레이어 스크린샷, 스냅챗 수신 확인 메시지(Opened 2m ago), 네온 핑크빛 디지털 낙서 등을 픽셀이 깨지고 글리치된 느낌으로 연출합니다. 이를 미니멀하고 고급스러운 테크니컬 그리드 레이아웃에 과감히 배치하여, 마치 암호화된 2016년의 프라이빗 금고 같은 무드를 구현합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="bottom-white-bar"></div>
+
+        <footer>
+            <div class="footer-copy">2026 IS THE NEW 2016</div>
+        </footer>
+    </div>
+
+    <div class="sticky-player">
+        <div class="player-info">
+            <div class="track-details">
+                <div class="track-title" id="playerTitle">Loading...</div>
+                <div class="track-artist" id="playerArtist">Loading...</div>
+            </div>
+            <div class="player-controls">
+                <button id="prevBtn">◀◀</button>
+                <button id="playBtn">▶</button>
+                <button id="nextBtn">▶▶</button>
+            </div>
+        </div>
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <audio id="mainAudio" preload="metadata"></audio>
+    </div>
+
+    <script>
+        const playlist = [
+            { title: "Number 1", artist: "Sodomland", file: "audio/Number 1.mp3" },
+            { title: "Falling", artist: "Frost Children", file: "audio/Falling.mp3" },
+            { title: "iPod Touch", artist: "Ninajirachi", file: "audio/iPod Touch.mp3" },
+            { title: "Caustic", artist: "The Hellp", file: "audio/Caustic.mp3" },
+            { title: "Beauty And A Beat (ft. Nicki Minaj)", artist: "Justin Bieber", file: "audio/Beauty And A Beat ft. Nicki Minaj.mp3" },
+            { title: "Sorry", artist: "Justin Bieber", file: "audio/Sorry.mp3" }
+        ];
+
+        let currentIndex = 0;
+        const audio = document.getElementById('mainAudio');
+        const playBtn = document.getElementById('playBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const progressBar = document.getElementById('progressBar');
+        const progressContainer = document.getElementById('progressContainer');
+        const playerTitle = document.getElementById('playerTitle');
+        const playerArtist = document.getElementById('playerArtist');
+
+        function loadTrack(index) {
+            const track = playlist[index];
+            audio.src = track.file;
+            playerTitle.textContent = track.title;
+            playerArtist.textContent = track.artist;
+            progressBar.style.width = '0%';
+        }
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                playBtn.textContent = '❚❚';
+            } else {
+                audio.pause();
+                playBtn.textContent = '▶';
+            }
+        }
+
+        function nextTrack() {
+            currentIndex = (currentIndex + 1) % playlist.length;
+            loadTrack(currentIndex);
+            audio.play();
+            playBtn.textContent = '❚❚';
+        }
+
+        function prevTrack() {
+            currentIndex = (currentIndex - 1 + playlist.length) % playlist.length;
+            loadTrack(currentIndex);
+            audio.play();
+            playBtn.textContent = '❚❚';
+        }
+
+        playBtn.addEventListener('click', togglePlay);
+        nextBtn.addEventListener('click', nextTrack);
+        prevBtn.addEventListener('click', prevTrack);
+
+        audio.addEventListener('ended', nextTrack);
+
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                const progressPercent = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = `${progressPercent}%`;
+            }
+        });
+
+        progressContainer.addEventListener('click', (e) => {
+            const width = progressContainer.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+            if (duration) {
+                audio.currentTime = (clickX / width) * duration;
+            }
+        });
+
+        loadTrack(currentIndex);
+    </script>
+</body>
+</html>
